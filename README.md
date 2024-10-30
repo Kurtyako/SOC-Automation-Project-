@@ -21,3 +21,5 @@ This is the network diagram I have put together to clearly represent how the net
 Here is the diagram without icons and in the style of a flow chart.
 
 ![SOC WORD](https://github.com/user-attachments/assets/54cc5d69-dad1-4225-99b0-27bf8d756864)
+
+# Part 2 Installing Applications and Virtual Machines
