@@ -106,7 +106,37 @@ I am installing TheHive on a virtual machine I have created that is running Ubun
 
 I have already installed Wazuh and have configured it as I have previously completed the Wazuh File Integrity Monitoring and I can repurpose this configuration to fit my needs in this project. These steps and screenshots will be the same as the Wazuh FIM Project
 
+To set up Wazuh, I will be using two virtual machines. One Machine will contain a pre-built virtual machine image in an Open Virtual Appliance(OVA) format containing the following components: Wazuh's manager, indexer, and dashboard. I will use this Wazuh OVA image with Oracle VM Virtual Box. The other virtual machine will be a Windows Server 2022 as my target machine.
 
+1. Starting Windows Server 2022 and Wazuh OVA machine in Virtual Box.   
+
+	![Wazuh virtual box](https://github.com/user-attachments/assets/a1a0d240-cab6-421d-9bad-6ae4ab06e32f)
+
+2. After getting both of the virtual machines up and running my next step is to get the Wazuh agent installed on the Windows 2022 server. From the official Wazuh documentation website, I can download the Wazuh agent and it will look like this when complete:
+   
+	![download](https://github.com/user-attachments/assets/69024763-cb23-40e9-8020-79f9b57da560)
+
+3. Now I need to get the Wazuh server IP address and the authentication key to link the Wazuh server to the Wazuh Agent.
+
+4. To get the IP address I will run the "ip a" command:
+   
+	![wazuh ip](https://github.com/user-attachments/assets/bfb8e0f2-4cfb-48e3-8072-76b7cfecc7d9)
+
+5. Next I will get the authenticaion key by accessing /var/ossec/bin/manage_agents on the Wazuh Manager host.
+   
+	![Wazuh agetn key](https://github.com/user-attachments/assets/c75a97c1-206d-4954-8927-31e465b636f6)
+
+6. Turning back to the Windows Server 2022 we can now import our findings for the IP address and the authentication key.
+
+	 ![Wazuh windows key](https://github.com/user-attachments/assets/4ca85ed1-32bd-41fa-955c-c3db8195b87c)
+
+7. Now to confirm we have set Wazuh up correctly I will try and access the Wazuh dashboard using the IP address of the Wazuh host which is 192.168.100.131 in Firefox.
+
+	 ![wazuh dashboard](https://github.com/user-attachments/assets/be0a8705-c5b6-44d0-b66e-b4fbd51e2c77)
+
+8. After I signed in I can see that the agent is active.
+
+	![Wazuh agent](https://github.com/user-attachments/assets/bb8cbb5c-0135-4796-bfcc-0d6340f51ea7)
 
 
 
