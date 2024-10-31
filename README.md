@@ -102,7 +102,9 @@ I am installing TheHive on a virtual machine I have created that is running Ubun
 25.  25
 ![hive 25](https://github.com/user-attachments/assets/f56a702f-d83d-4b7d-8e00-c6f99b88659c)
 
-    
+## Installing Wazuh
+
+I have already installed Wazuh and have configured it as I have previously completed the Wazuh File Integrity Monitoring and I can repurpose this configuration to fit my needs in this project. These steps and screenshots will be the same as the Wazuh FIM Project
 
 
 
